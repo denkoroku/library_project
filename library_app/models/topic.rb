@@ -2,20 +2,22 @@ require_relative('../db/sql_runner')
 
 class Topic
 
-  attr_reader :id, :book_id
+  attr_reader :id, :topic
 
   def initialize(options)
     @id = options['id'].to_i
-    @book_id = options['book_id'].to_i
+    @topic = options['topic']
   end
 
 #create
   def save
-    sql = "INSERT INTO topics(book_id)VALUES($1)RETURNING id"
-    values = [@book_id]
+    sql = "INSERT INTO topics(topic)VALUES($1)RETURNING id"
+    values = [@topic]
     topic = SqlRunner.run(sql, values).first
     @id = topic['id'].to_i
   end
+
+
 
 #Read
   def self.all()
