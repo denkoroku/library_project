@@ -17,8 +17,6 @@ class Topic
     @id = topic['id'].to_i
   end
 
-
-
 #Read
   def self.all()
     sql = "SELECT * FROM topics"
