@@ -2,7 +2,8 @@ require_relative('../db/sql_runner')
 
 class Borrower
 
-  attr_reader :id, :first_name, :last_name, :email
+  attr_reader :id
+  attr_accessor  :first_name, :last_name, :email
 
   def initialize(options)
     @id = options['id'].to_i
@@ -16,7 +17,7 @@ class Borrower
   def save()
     sql = "INSERT INTO borrowers(first_name, last_name, email) VALUES($1, $2, $3) RETURNING id"
     values = [@first_name, @last_name, @email]
-    customer = SqlRunner.run(sql, values).first
+    borrower = SqlRunner.run(sql, values).first
     @id = borrower['id'].to_i
   end
 

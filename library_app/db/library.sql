@@ -8,16 +8,16 @@ CREATE TABLE borrowers (
   id SERIAL4 PRIMARY KEY,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
-  email_address VARCHAR(255)
+  email VARCHAR(255)
 );
 
 CREATE TABLE books (
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(255),
   author VARCHAR(255),
-  publish_date DATE,
-  price INT,
-  bought_date DATE
+  published_date INT,
+  price FLOAT,
+  bought_date INT
 );
 
 CREATE TABLE topics (

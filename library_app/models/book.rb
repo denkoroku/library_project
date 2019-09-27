@@ -2,7 +2,9 @@ require_relative('../db/sql_runner')
 
 class Book
 
-  attr_reader :id, :title, :author, :published_date, :bought_date, :price
+  attr_reader :id
+  attr_accessor :title, :author, :published_date, :bought_date, :price
+
 
   def initialize(options)
     @id = options['id'].to_i
@@ -18,7 +20,7 @@ class Book
   def save()
     sql = "INSERT INTO books(title, author, published_date, bought_date, price)VALUES($1, $2, $3, $4, $5)RETURNING *"
     values = [@title, @author, @published_date, @bought_date, @price]
-    film = SqlRunner.run(sql, values).first
+    book = SqlRunner.run(sql, values).first
     @id = book['id'].to_i
   end
 
