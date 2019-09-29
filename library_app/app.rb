@@ -35,3 +35,8 @@ end
 get '/admin/new_user' do
   erb(:'admin/new_user')
 end
+
+post '/admin/new_user' do
+  Borrower.new(params).save
+  erb(:'admin/new_user')
+end
