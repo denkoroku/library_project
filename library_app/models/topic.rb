@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Topic
 
-  attr_reader :id, :topic
+  attr_accessor :id, :topic
 
   def initialize(options)
     @id = options['id'].to_i

@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('../models/book')
 
 class Loan
 
@@ -32,7 +33,7 @@ class Loan
   end
 
 
-#Returning things and people
+#Returning books and borrowers
   def book
     sql = "SELECT * FROM books WHERE books.id = $1"
     values = [@book_id]
@@ -42,7 +43,7 @@ class Loan
   end
 
   def borrower
-    sql = "SELECT * FROM borrowers WHERE borrower.id = $1"
+    sql = "SELECT * FROM borrowers WHERE borrowers.id = $1"
     values = [@borrower_id]
     borrower_data = SqlRunner.run(sql, values)
     borrower = Borrower.map_items(borrower_data).first

@@ -53,7 +53,7 @@ class Book
     WHERE loans.book_id = $1"
     values = [@id]
     borrower_data = SqlRunner.run(sql, values)
-    borrower = Borrower.map_items(borrower_data)
+    borrowers = Borrower.map_items(borrower_data)
     return borrowers
   end
 
