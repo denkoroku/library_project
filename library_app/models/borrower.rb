@@ -31,7 +31,7 @@ class Borrower
 # update
   def update
     sql = "UPDATE borrowers SET
-     first_name = $1, last_name = $2, email = $3, WHERE id = $4"
+     (first_name, last_name, email) = ($1, $2, $3) WHERE id = $4"
     values = [@first_name, @last_name, @email, @id]
     SqlRunner.run(sql, values)
   end
@@ -41,6 +41,13 @@ def self.delete_all()
   sql = "DELETE FROM borrowers"
   SqlRunner.run(sql)
 end
+
+def delete()
+    sql = "DELETE FROM borrowers
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
 
 # other methods
   def books()

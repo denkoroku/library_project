@@ -1,7 +1,7 @@
 <div class="erb_form"
   <div><h2>Edit Borrower</h2></div>
 
-    <form action="/admin/new_user/<%= @borrower.id %>"> method="post">
+    <form action="/admin/list_borrowers/<%= @borrower.id %>"method="post">
       <input type="hidden" name="_method" value="put">
 
       <div class="form-el"

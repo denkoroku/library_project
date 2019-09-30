@@ -25,17 +25,11 @@ get '/admin/list_borrowers/:id/edit' do
     erb(:'admin/edit_user')
 end
 
-post '/admin/list_borrowers/:id/edit' do
+put '/admin/list_borrowers/:id' do
   borrower = Borrower.new(params)
   borrower.update
-  redirect to "/admin/list_borrowers"
+  redirect to "/admin/list_borrowers/#{params['id']}"
 end
-
-# post '/admin/list_borrowers/:id' do
-#   borrower = Borrower.new(params)
-#   borrower.update
-#   redirect to "/admin/list_borrowers/#{params['id']}"
-# end
 
 post '/admin/list_borrowers/:id/delete' do
   borrower = Borrower.find(params['id'])
@@ -48,7 +42,7 @@ post '/admin/new_user' do
   erb(:'admin/new_user')
 end
 
-post '/admin/edit_user' do
-  Borrower.new(params).update
-  erb(:'admin/edit_user')
-end
+# post '/admin/edit_user' do
+#   Borrower.new(params).update
+#   erb(:'admin/edit_user')
+# end
