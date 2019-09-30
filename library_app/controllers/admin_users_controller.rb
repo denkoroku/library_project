@@ -25,11 +25,17 @@ get '/admin/list_borrowers/:id/edit' do
     erb(:'admin/edit_user')
 end
 
-post '/admin/list_borrowers/:id' do
+post '/admin/list_borrowers/:id/edit' do
   borrower = Borrower.new(params)
   borrower.update
-  redirect to "/admin/list_borrowers/#{params['id']}"
+  redirect to "/admin/list_borrowers"
 end
+
+# post '/admin/list_borrowers/:id' do
+#   borrower = Borrower.new(params)
+#   borrower.update
+#   redirect to "/admin/list_borrowers/#{params['id']}"
+# end
 
 post '/admin/list_borrowers/:id/delete' do
   borrower = Borrower.find(params['id'])

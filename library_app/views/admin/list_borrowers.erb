@@ -4,8 +4,6 @@
   <ul>
     <% @borrower.each do |borrower| %>
     <li><a href="/admin/list_borrowers/<%= borrower.id %>"><%= borrower.first_name %></a></li>
-
-
     <% end %>
   </ul>
 </div>

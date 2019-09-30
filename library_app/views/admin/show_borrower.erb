@@ -1,5 +1,9 @@
+<div class="erb_content">
+
 <h2><%= @borrower.first_name %> <%= @borrower.last_name %></h2>
 <p>Email: <%= @borrower.email %></p>
 
-<a href="/admin/borrower/<%= @borrower.id %>/edit">Edit</a>
-<form action="/admin/borrower/<%= @borrower.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+<a href="/admin/list_borrowers/<%= @borrower.id %>/edit">Edit</a>
+<form action="/admin/list_borrowers/<%= @borrower.id %>/delete" method="POST"><input type="submit" value="Delete"></form>
+
+</div>

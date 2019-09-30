@@ -56,6 +56,14 @@ end
     return books()
   end
 
+  def self.find(id)
+      sql = "SELECT * FROM borrowers
+      WHERE id = $1"
+      values = [id]
+      result = SqlRunner.run(sql, values).first
+      borrower = Borrower.new(result)
+      return borrower
+    end
 
   #Helper method for mapping
   def self.map_items(borrower_data)

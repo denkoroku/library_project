@@ -1,22 +1,22 @@
 <div class="erb_form"
   <div><h2>Edit Borrower</h2></div>
 
-    <form action="/admin/new_user/<%= @borrowers.id %>"> method="post">
+    <form action="/admin/new_user/<%= @borrower.id %>"> method="post">
       <input type="hidden" name="_method" value="put">
 
       <div class="form-el"
         <label class="form-label" for="first-name">First Name:</label>
-        <input id="first-name" type="text" name="first_name" value = "<%= @borrowers.first_name %>"  >
+        <input id="first-name" type="text" name="first_name" value = "<%= @borrower.first_name %>"  >
       </div>
 
       <div class="form-el"
         <label class="form-label" for="last-name">Last Name:</label>
-        <input id="last-name" type="text" name="last_name">
+        <input id="last-name" type="text" name="last_name" value = "<%= @borrower.last_name %>">
       </div>
 
       <div class="form-el"
         <label class="form-label" for="email">Email Address:</label>
-        <input id="email" type="text" name="email">
+        <input id="email" type="text" name="email"value = "<%= @borrower.email %>">
       </div>
 
       <div id="sub-but">
