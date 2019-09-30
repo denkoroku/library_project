@@ -34,5 +34,6 @@ CREATE TABLE book_topic_join (
 CREATE TABLE loans (
   id SERIAL4 PRIMARY KEY,
   borrower_id INT4 REFERENCES borrowers(id)ON DELETE CASCADE,
-  book_id INT4 REFERENCES books(id) ON DELETE CASCADE
+  book_id INT4 REFERENCES books(id) ON DELETE CASCADE,
+  loan_date TIMESTAMP
 );

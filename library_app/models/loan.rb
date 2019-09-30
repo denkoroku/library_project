@@ -3,18 +3,19 @@ require_relative('../models/book')
 
 class Loan
 
-  attr_reader :id, :borrower_id, :book_id
+  attr_reader :id, :borrower_id, :book_id, :loan_date
 
   def initialize(options)
     @id = options['id'].to_i
     @borrower_id = options['borrower_id'].to_i
     @book_id = options['book_id'].to_i
+    @loan_date = options ['loan_date']
   end
 
 #create
   def save
-    sql = "INSERT INTO loans(borrower_id,book_id)VALUES($1, $2)RETURNING id"
-    values = [@borrower_id, @book_id]
+    sql = "INSERT INTO loans(borrower_id,book_id, loan_date)VALUES($1, $2, $3)RETURNING id"
+    values = [@borrower_id, @book_id, @loan_date]
     loan = SqlRunner.run(sql, values).first
     @id = loan['id'].to_i
   end
@@ -48,6 +49,10 @@ class Loan
     borrower_data = SqlRunner.run(sql, values)
     borrower = Borrower.map_items(borrower_data).first
     return borrower
+  end
+
+  def pretty_date
+    return "#{@loan_date.strftime("%Y-%m-%d %H:%M:%S")}"
   end
 
 

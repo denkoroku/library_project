@@ -29,7 +29,7 @@ book2.save
 book3 = Book.new({'title' => 'Autistic Girls', 'author' => 'Helen Copus','published_date' => '2013','bought_date' => '2017', 'price' => '28.99' })
 book3.save
 
-loan1 = Loan.new({'borrower_id' => borrower1.id, 'book_id' => book1.id})
+loan1 = Loan.new({'borrower_id' => borrower1.id, 'book_id' => book1.id, 'loan_date' => '2019-08-13 00:00:00' })
 loan1.save
 
 topic1 = Topic.new({'topic' => 'dyslexia'})

@@ -3,7 +3,12 @@
 
   <ul>
     <% @loans.each do |loan|%>
-    <li><%= loan.borrower %></li>
+    <li>
+      <%= loan.borrower.first_name %>
+       <%= loan.borrower.last_name %>
+       borrowed  "<%= loan.book.title %>"
+       on <%= loan.loan_date %>
+     </li>
     <% end %>
   </ul>
 </div>
