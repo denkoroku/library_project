@@ -33,6 +33,11 @@ class Loan
     SqlRunner.run(sql)
   end
 
+  def overdue
+    sql = "SELECT * FROM loans WHERE { created_at < 1.month.ago } "
+    overdue_data = SqlRunner.run(sql)
+    return Loan.map_items(overdue_data)
+  end
 
 #Returning books and borrowers
   def book
@@ -51,9 +56,6 @@ class Loan
     return borrower
   end
 
-  def pretty_date
-    return "#{@loan_date.strftime("%Y-%m-%d %H:%M:%S")}"
-  end
 
 
   #Helper method for mapping

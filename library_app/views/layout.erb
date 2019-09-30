@@ -14,10 +14,19 @@
   <div class= "top">
     <img src="/images/logo.png" alt="SCILL logo" id="title">
     <span id="title-text">Welcome to the Library</span>
+    <hr />
   </div>
 
   <!--navigation -->
-  <nav class="sidebar"><br>
+  <div id="mySidenav" class="sidenav">
+    <a href="/admin" id="about">Home</a>
+    <a href="/admin/list_books" id="blog">Books</a>
+    <a href="/admin/list_borrowers" id="projects">Borrowers</a>
+    <a href="/admin/list_loans" id="contact">Loans</a>
+  </div>
+
+
+  <!-- <nav class="sidebar"><br>
     <div>
       <a href="/admin" class="button"><i class="fa fa-home fa-fw"></i>  Home</a>
       <a href="/admin/list_books" class="button"><i class="fa fa-eye fa-fw"></i>  See all books</a>
@@ -31,18 +40,16 @@
       <a href="/admin/overdue" class="button"><i class="fa fa-time fa-fw"></i>  Overdue Books</a>
       <a href="" class="button"><i class="fa fa-users fa-fw"></i> User Page</a>
     </div>
-  </nav>
+  </nav> -->
 
 
 <%= yield %>
 
-    <hr>
+
 
     <!-- Footer -->
     <footer>
-      <h4>About</h4>
-      <p>Written by Cath</p>
-      <p>CodeClan project</p>
+      <p>Written by Cath  -  CodeClan project</p>
     </footer>
 
 
