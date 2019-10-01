@@ -54,7 +54,10 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   position:fixed;
   z-index:2;
 }
-
+.sidenav i{
+  float:right;
+  
+}
 /* Side Nav bar */
 #mySidenav{
 }
