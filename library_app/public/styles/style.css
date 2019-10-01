@@ -60,9 +60,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 }
 /* Style the links inside the sidenav */
 #mySidenav a {
-  position: absolute; /* Position them relative to the browser window */
-  left: -120px; /* Position them outside of the screen */
-  transition: 0.3s; /* Add transition on hover */
+  position: absolute;
+  left: -120px;
+  transition: 0.3s;
   padding: 15px;
   width: 160px;
   text-decoration: none;
@@ -163,6 +163,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 }
 
 .btn-red{
+  width:80%;
   background-color:tomato;
   padding:16;
   padding:16px;
@@ -172,6 +173,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 }
 
 .btn-blue{
+  width:80%;
   background-color:deepskyblue;
   padding:16;
   color:white;
@@ -182,6 +184,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 }
 
 .btn-green{
+  width:80%;
   background-color:limegreen;
   padding:16;
   padding:16px;
@@ -190,6 +193,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   box-shadow:10px 10px 10px grey;
 }
 .btn-orange{
+  width:80%;
   background-color:orange;
   padding:16;
   color:white;
