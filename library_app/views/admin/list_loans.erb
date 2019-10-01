@@ -1,15 +1,32 @@
 <div class="erb_content">
   <h2>List of Books on Loan </h2>
 
-  <ul>
+
+
+
+
+  <table>
+    <th>Borrower Name</th>
+    <th>Book Title</th>
+    <th>Date Borrowed</th>
+    <th>Status</th>
+
+
     <% @loans.each do |loan|%>
-    <% formatted_date = Date.parse(loan.loan_date) %>
-    <li>
-      <%= loan.borrower.first_name %>
-       <%= loan.borrower.last_name %>
-       borrowed  "<%= loan.book.title %>"
-       on <%= formatted_date.strftime('%d %b %Y') %>
-     </li>
-    <% end %>
-  </ul>
+      <% formatted_date = Date.parse(loan.loan_date) %>
+      <% return_date = Date.parse(loan.loan_date) >> 1 %>
+      <tr>
+        <td><%= loan.borrower.first_name %> <%= loan.borrower.last_name %></td>
+        <td>"<%= loan.book.title %>"</td>
+        <td><%= formatted_date.strftime('%d %b %Y') %></td>
+        <td><%= "Overdue" if Date.new > return_date  %></td>
+
+        <td><a href="/admin/list_loans/<%= loan.id%>/delete ">delete</a></td>
+      </tr>
+  <% end %>
+</table>
+
+
+
+
 </div>

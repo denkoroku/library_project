@@ -33,18 +33,25 @@ class Loan
     SqlRunner.run(sql)
   end
 
-  def overdue
-    sql = "SELECT * FROM loans WHERE  "
-    overdue_data = SqlRunner.run(sql)
-    return Loan.map_items(overdue_data)
+  def delete()
+    sql = "DELETE FROM loans
+    WHERE id = $1"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM loans
+    WHERE id = $1"
+    values = [id]
+    result = SqlRunner.run(sql, values).first
+    loan = Loan.new(result)
+    return loan
   end
 
   def format_date
     return loan_date.strftime("%d %m %y")
   end
-
-
-
 
 #Returning books and borrowers
   def book

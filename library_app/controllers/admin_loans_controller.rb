@@ -35,7 +35,8 @@ put '/admin/list_loans/:id' do
   redirect to "/admin/list_loans/#{params['id']}"
 end
 
-post '/admin/list_loans/:id/delete' do
+
+get '/admin/list_loans/:id/delete' do
   loan = Loan.find(params['id'])
   loan.delete
   redirect to '/admin/list_loans'
