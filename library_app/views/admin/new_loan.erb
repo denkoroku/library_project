@@ -1,0 +1,27 @@
+<div class="erb_form"
+  <div><h2>New Loan</h2></div>
+  <hr />
+
+  <form action="/admin/loans" method="post">
+    <div class="form-el">
+      <label for="book_select">Select Book:</label>
+      <select name="book_id" id="book_select">
+        <% @books.each do |book| %>
+            <option value=<%= book.id %>><%= book.title %></option>
+        <% end %>
+      </select>
+    </div>
+
+    <div class="form-el">
+      <label for="borrower_select">Select Borrower:</label>
+      <select name="borrower_id" id="borrower_select">
+        <% @borrowers.each do |borrower| %>
+            <option value=<%= borrower.id %>><%= borrower.first_name %> <%= borrower.last_name %></option>
+        <% end %>
+      </select>
+    </div>
+      <div id="sub-but">
+        <input  type="submit" value="Lend Book"/>
+      </div>
+    </form>
+  </div>

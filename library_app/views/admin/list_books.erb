@@ -19,7 +19,8 @@
         <td><%= book.published_date %></td>
         <td><%= book.bought_date %></td>
         <td><%= book.price %></td>
-        <td><%=  %></td>
+        <td><%= book.onloan %></td>
+
         <td><a href="/admin/list_books/<%= book.id %>">edit</a></td>
       </tr>
       <% end %>

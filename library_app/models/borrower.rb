@@ -43,11 +43,11 @@ def self.delete_all()
 end
 
 def delete()
-    sql = "DELETE FROM borrowers
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
-  end
+  sql = "DELETE FROM borrowers
+  WHERE id = $1"
+  values = [@id]
+  SqlRunner.run(sql, values)
+end
 
 # other methods
   def books()

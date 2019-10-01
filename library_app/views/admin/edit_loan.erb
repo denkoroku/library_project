@@ -1,0 +1,12 @@
+<div class="form-el">
+      <label for="book_select">Select Book:</label>
+      <select name="book_id" id="book_select" selected="<%= @loan.book_id  %>">
+        <% @book.each do |book| %>
+          <% if book.id == @loan.book_id %>
+            <option value=<%= book.id %> selected><%= book %></option>
+          <% else %>
+            <option value=<%= book.id %>><%= book %></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>

@@ -1,0 +1,12 @@
+<div class="erb_content">
+
+  <h2>"<%= @book.title %>" by <%= @book.author %></h2>
+    <p>Price: <%= @book.price %></p>
+
+    <a href="/admin/list_books/<%= @book.id %>/edit">Edit</a>
+    <form action="/admin/list_books/<%= @book.id %>/delete" method="POST">
+      <input type="submit" value="Delete">
+    </form>
+
+
+</div>

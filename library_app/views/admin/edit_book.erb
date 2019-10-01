@@ -1,0 +1,35 @@
+<div class="erb_form"
+  <div><h2>Add New Book</h2></div>
+    <form action="/admin/new_book/<%= @book.id %>"method="post" method="post">
+        <input type="hidden" name="_method" value="put">
+
+      <div class="form-el"
+        <label class="form-label" for="title">Title:</label>
+        <input id="title" type="text" name="title" value = "<%= @book.title %>" >
+      </div>
+
+      <div class="form-el"
+        <label class="form-label" for="author">Author:</label>
+        <input id="author" type="text" name="author" value = "<%= @book.author %>" >
+      </div>
+
+      <div class="form-el"
+        <label class="form-label" for="published_date">Published in year:</label>
+        <input id="published_date" type="text" name="published_date" value = "<%= @book.published_date %>">
+      </div>
+
+      <div class="form-el"
+        <label class="form-label" for="bought_date">Bought in year:</label>
+        <input id="bought_date" type="text" name="bought_date" value = "<%= @book.bought_date %>">
+      </div>
+
+      <div class="form-el"
+        <label class="form-label" for="price">Price:</label>
+        <input id="price" type="text" name="price" value = "<%= @book.price %>">
+      </div>
+
+      <div id="sub-but">
+        <input  type="submit" value="Edit Book"/>
+      </div>
+    </form>
+  </div>
