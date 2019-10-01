@@ -10,7 +10,6 @@ body{
 }
 
 a:link, a:visited {
-  background-color:white;
   color: black;
   padding: ;
   text-decoration: none;
@@ -18,7 +17,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-  background-color: red;
+  background-color: tomato;
 }
 
 h1{font-size:36px}
@@ -79,17 +78,17 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 /* The about link: 20px from the top with a green background */
 #about {
   top: 140px;
-  background-color: #4CAF50;
+  background-color: limegreen;
 }
 
 #blog {
   top: 200px;
-  background-color: #2196F3; /* Blue */
+  background-color: deepskyblue; /* Blue */
 }
 
 #projects {
   top: 260px;
-  background-color: #f44336; /* Red */
+  background-color: tomato; /* Red */
 }
 
 #contact {
@@ -233,6 +232,17 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
 #sub-but{
   height:50px;
   margin-left:50%;
+}
+.add{
+  width:100%;
+}
+table, th, td {
+  border: 1px solid darkgrey;
+  border-collapse:collapse;
+}
+
+td, th{
+  padding:15px;
 }
 
 footer{

@@ -1,9 +1,30 @@
 <div class ="erb_content">
-  <h2>List of Borrowers </h2>
+  <h2>Borrowers </h2>
+  <hr />
 
-  <ul>
-    <% @borrower.each do |borrower| %>
-    <li><a href="/admin/list_borrowers/<%= borrower.id %>"><%= borrower.first_name %></a></li>
-    <% end %>
-  </ul>
+  <div class="add">
+    <div class="container btn-red">
+
+      <a href="/admin/new_user">
+        <i class="fa fa-user"></i><i class="fa fa-plus-square "></i>Add New Borrower</a>
+
+    </div>
+  </div>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </tr>
+  <% @borrower.each do |borrower| %>
+  <tr>
+    <td><%= borrower.first_name %></td>
+    <td><%= borrower.last_name %></td>
+    <td><%= borrower.email %></td>
+    <td><a href="/admin/list_borrowers/<%= borrower.id %>">edit</a></td>
+  </tr>
+  <% end %>
+</table>
+
 </div>
