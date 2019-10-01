@@ -3,11 +3,12 @@
 
   <ul>
     <% @loans.each do |loan|%>
+    <% formatted_date = Date.parse(loan.loan_date) %>
     <li>
       <%= loan.borrower.first_name %>
        <%= loan.borrower.last_name %>
        borrowed  "<%= loan.book.title %>"
-       on <%= loan.loan_date %>
+       on <%= formatted_date.strftime('%d %b %Y') %>
      </li>
     <% end %>
   </ul>

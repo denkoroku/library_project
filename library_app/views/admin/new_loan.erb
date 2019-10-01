@@ -20,6 +20,12 @@
         <% end %>
       </select>
     </div>
+
+  
+    <form action="/admin/list_loans/<%= @loan.id %>/delete" method="POST">
+      <input type="submit" value="Delete">
+    </form>
+
       <div id="sub-but">
         <input  type="submit" value="Lend Book"/>
       </div>
