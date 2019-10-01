@@ -1,9 +1,29 @@
 <div class="erb_content">
-    <h2>List of Books </h2>
+    <h2>Books </h2>
+    <hr />
 
-  <ul>
-    <% @books.each do |book| %>
-    <li><%= book.title %> by <%= book.author %></li>
-    <% end %>
-  </ul>
+    <table>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Published Date</th>
+        <th>Bought Date</th>
+        <th>Bought Price</th>
+        <th>On Loan?</th>
+
+      </tr>
+      <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+        <td><%= book.published_date %></td>
+        <td><%= book.bought_date %></td>
+        <td><%= book.price %></td>
+        <td><%=  %></td>
+        <td><a href="/admin/list_books/<%= book.id %>">edit</a></td>
+      </tr>
+      <% end %>
+    </table>
+
+
 </div>
