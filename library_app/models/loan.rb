@@ -6,7 +6,7 @@ class Loan
   attr_reader :id, :borrower_id, :book_id, :loan_date
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @borrower_id = options['borrower_id'].to_i
     @book_id = options['book_id'].to_i
     @loan_date = options ['loan_date']

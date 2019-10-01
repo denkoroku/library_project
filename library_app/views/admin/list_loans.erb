@@ -19,7 +19,7 @@
         <td><%= loan.borrower.first_name %> <%= loan.borrower.last_name %></td>
         <td>"<%= loan.book.title %>"</td>
         <td><%= formatted_date.strftime('%d %b %Y') %></td>
-        <td><%= "Overdue" if Date.new > return_date  %></td>
+        <td><%= "Overdue" if Date.new > return_date %></td>
 
         <td><a href="/admin/list_loans/<%= loan.id%>/delete ">delete</a></td>
       </tr>

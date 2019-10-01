@@ -51,12 +51,12 @@ end
 
 # other methods
   def books()
-    sql = "SELECT book.* FROM books
-    INNER JOIN loans ON loans.book_id = book.id
-    WHERE loan.borrower_id = $1"
+    sql = "SELECT books.* FROM books
+    INNER JOIN loans ON loans.book_id = books.id
+    WHERE loans.borrower_id = $1"
     values = [@id]
     book_data = SqlRunner.run(sql, values)
-    return Thing.map_items(book_data)
+    return Book.map_items(book_data)
   end
 
   def books_borrowed()

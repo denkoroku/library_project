@@ -3,6 +3,9 @@
   <h2><%= @borrower.first_name %> <%= @borrower.last_name %></h2>
     <p>Email: <%= @borrower.email %></p>
 
+    <h2><%= @borrower.books.first.title %></h2>
+
+
     <a href="/admin/list_borrowers/<%= @borrower.id %>/edit">Edit</a>
     <form action="/admin/list_borrowers/<%= @borrower.id %>/delete" method="POST">
       <input type="submit" value="Delete">
