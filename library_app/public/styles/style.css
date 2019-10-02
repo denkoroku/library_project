@@ -200,6 +200,11 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   margin:10px;
 }
 
+.btn-green:hover{
+  background-color: silver;
+}
+
+
 .btn-txt{
   width:100%;
   text-align:center;
@@ -214,6 +219,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   margin-top:30px;
   box-shadow:10px 10px 10px grey;
 }
+.btn-red:hover{
+    background-color: silver;
+}
 
 .btn-blue{
   width:80%;
@@ -225,7 +233,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   margin-top:30px;
   box-shadow:10px 10px 10px grey;
 }
-
+.btn-blue:hover{
+    background-color: silver;
+}
 .btn-green{
   width:80%;
   background-color:limegreen;
@@ -244,6 +254,10 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   border-radius:5px;
   margin-top:30px;
   box-shadow:10px 10px 10px grey;
+}
+
+.btn-orange:hover{
+    background-color: silver;
 }
 
 .icon{
