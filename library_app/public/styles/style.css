@@ -252,7 +252,14 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   text-align:center;
 }
 
+#topic_select{
+  width:200px;
+}
 
+#size_icon{
+  font-size:40px;
+  margin:10px;
+}
 
 /* For Forms */
 .erb_form{
@@ -293,13 +300,46 @@ h1,h2,h3,h4,h5,h6{font-family:'Tenor Sans', sans-serif;margin:10px 0}
   color:white;
 }
 
+.form_button3{
+  padding:10px;
+  margin-top:40px;
+  margin-bottom:40px;
+  border-radius:5px;
+  width:200px;
+  font-size:14px;
+  text-align: center;
+  background-color: white;
+  border-style: solid;
+  border-width:thin;
+  border-color:lightgrey;
+
+}
+
+.form_button3:active{
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+  color:white;
+}
+
+.form_button3:hover{
+  background-color: lightgrey;
+  color:white;
+}
+
+.align_center{
+  text-align: center;
+}
+
 #sub-but{
   height:50px;
   margin-left:50%;
 }
-.add{
+
+
+/* .add{
   width:100%;
-}
+} */
+
 table, th, td {
   border: 1px solid darkgrey;
   border-collapse:collapse;

@@ -38,6 +38,8 @@ topic2 = Topic.new({'topic' => 'dyspraxia'})
 topic2.save
 topic3 = Topic.new({'topic' => 'ADHD'})
 topic3.save
+topic3 = Topic.new({'topic' => 'sensory integration'})
+topic3.save
 
 join1 = Join.new({'topic_id' => topic1.id, 'book_id' => book1.id})
 join1.save
