@@ -40,6 +40,16 @@ class Topic
     return books
   end
 
+  def topic_find
+    sql = "SELECT books.* FROM books
+    INNER JOIN book_topic_join
+    ON books.id=book_topic_join.book_id
+    WHERE book_topic_join.topic_id = $1"
+    values = [@id]
+    book_data = SqlRunner.run(sql, values)
+    books = Book.map_items(book_data)
+    return books
+  end
 
   #Helper method for mapping
   def self.map_items(topic_data)

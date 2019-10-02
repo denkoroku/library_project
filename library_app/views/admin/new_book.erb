@@ -27,6 +27,12 @@
         <input id="price" type="text" name="price">
       </div>
 
+      <% @topics.each do |topic| %>
+
+        <input type="checkbox" name="topic_id" value="<%= topic.id %>"> <%= topic.topic %><br>
+
+      <% end %>
+
       <div id="sub-but">
         <input  type="submit" value="Add Book"/>
       </div>

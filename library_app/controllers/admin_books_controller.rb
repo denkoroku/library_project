@@ -17,6 +17,7 @@ get '/admin/list_topics' do
 end
 
 get '/admin/new_book' do
+  @topics = Topic.all
   erb(:'admin/new_book')
 end
 
@@ -43,6 +44,8 @@ post '/admin/list_books/:id/delete' do
 end
 
 post '/admin/new_book' do
-  Book.new(params).save
+  @topics = Topic.all
+  @book_id = Book.new(params).save
+  Join.new({'topic_id' => params["topic_id"].to_i, 'book_id' => @book_id}).save
   erb(:'admin/new_book')
 end
