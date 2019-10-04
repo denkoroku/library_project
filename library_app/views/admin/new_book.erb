@@ -1,5 +1,6 @@
 <div class="erb_form"
   <div><h2>Add New Book</h2></div>
+
     <form action="/admin/new_book" method="post">
 
       <div class="form-el"
@@ -26,15 +27,16 @@
         <label class="form-label" for="price">Price:</label>
         <input id="price" type="text" name="price">
       </div>
+      <div>
+        <% @topics.each do |topic| %>
 
-      <% @topics.each do |topic| %>
+        <input class="erb_form_left"  type="checkbox" name="topic_id" value="<%= topic.id %>"> <%= topic.topic %><br>
 
-        <input type="checkbox" name="topic_id" value="<%= topic.id %>"> <%= topic.topic %><br>
-
-      <% end %>
+        <% end %>
+      </div>
 
       <div id="sub-but">
-        <input  type="submit" value="Add Book"/>
+        <input  class ="form_button2" type="submit" value="Add Book"/>
       </div>
     </form>
   </div>

@@ -41,8 +41,3 @@ post '/admin/new_user' do
   Borrower.new(params).save
   erb(:'admin/new_user')
 end
-
-# post '/admin/edit_user' do
-#   Borrower.new(params).update
-#   erb(:'admin/edit_user')
-# end

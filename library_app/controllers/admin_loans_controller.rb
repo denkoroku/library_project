@@ -45,6 +45,5 @@ end
 post '/admin/loans' do
   params['loan_date'] = DateTime.now
   Loan.new(params).save
-  # erb(:'admin/new_loan')
   redirect to '/admin/list_loans'
 end

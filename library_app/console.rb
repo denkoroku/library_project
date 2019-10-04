@@ -34,9 +34,9 @@ book4 = Book.new({'title' => 'Slow Learning', 'author' => 'Jane Dillon','publish
 book4.save
 
 
-loan1 = Loan.new({'borrower_id' => borrower1.id, 'book_id' => book1.id, 'loan_date' => '2019-08-13 00:00:00' })
+loan1 = Loan.new({'borrower_id' => borrower1.id, 'book_id' => book1.id, 'loan_date' => '2019-08-15 00:00:00' })
 loan1.save
-loan2 = Loan.new({'borrower_id' => borrower2.id, 'book_id' => book3.id, 'loan_date' => '2019-09-13 00:00:00' })
+loan2 = Loan.new({'borrower_id' => borrower2.id, 'book_id' => book3.id, 'loan_date' => '2018-09-21 00:00:00' })
 loan2.save
 loan3 = Loan.new({'borrower_id' => borrower3.id, 'book_id' => book2.id, 'loan_date' => '2019-02-13 00:00:00' })
 loan3.save
